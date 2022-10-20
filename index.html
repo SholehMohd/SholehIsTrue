@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Personal Portfolio</title>
+    <style>
+      html {
+      margin: 0;
+      padding: 0;
+}
+header{
+       width: 100vw;
+       height: 80px;
+       position: scroll;
+       top: 0;
+       background-color: white;
+       border-bottom: 1px solid red;
+       z-index: 1;
+}
+
+nav{
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+nav-link{
+         text-transform: uppercase;
+         color: orange;
+         font: 20px sans-serif;
+         padding: 100% 25px;
+}
+
+nav-link-hover{
+    background-color: red;
+    color: white;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13pt;
+    background-color: #efefef;
+    padding: 10px;
+    margin: 0;
+}
+h1 {
+    font-size: 15pt;
+
+color: orange;
+
+text-align: center; margin: 0 0 10px 0;
+
+padding: 18px 0 18px 0;
+}
+
+ h1 span {
+
+border: 1px solid orangered;
+padding: 10px;
+
+}
+
+p {
+
+padding: 0;
+
+margin: 0;
+}
+
+img-circle {
+
+border: 3px solid white;
+
+border-radius: 50%;
+
+}
+.main{
+  border: 15px solid orange;
+
+}
+.section {
+
+background-color: #fff;
+
+padding: 15px;
+
+margin-bottom: 10px;
+
+border-radius: 10px;
+}
+#header {
+
+    background-image: url("https://uploads-ssl.webflow.com/5e4dfa5d58d02b574c094981/5e61b93645 2770f1cc437223_Render% 20Engine%20Blur.jpg");
+    
+    background-size: cover;
+    
+    }
+    
+    #header img{
+    
+    display: block;
+    
+    width: 80px;
+    
+    height: 80px;
+    
+    margin: auto;
+    
+}
+    
+    #header p {
+    
+    font-size: 25pt; 
+    color: orange; 
+    padding-top: 5px; 
+    margin: 0; 
+    font-weight: bold; 
+    text-align: center;
+    
+}
+.selected {
+
+background-color: #136f48; 
+color: white;
+font-weight: bold;    
+}
+    
+.gallery{
+
+    display: flex;
+    flex-wrap: wrap;
+    /* Compensate for excess margin on outer gallery flex items */
+    margin: -1rem-1rem;
+    
+}
+gallery-item {
+
+/*Minimum width of 24rem and grow to fit available space */    
+flex: 1024rem;    
+ /* Margin value should be half of grid-gap value as margins on flex items don't collapse */    
+margin: 1rem;   
+box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4); 
+overflow: hidden;
+    
+}
+    
+    gallery-image {
+    
+width: 100%;
+display: block; 
+height: 100%; 
+transition: transform 400ms ease-out;
+object-fit: cover;
+}
+gallery-image:hover {
+     transform:scale(1.15);
+
+} li{
+
+margin-bottom: 15px;
+font-weight: bold;
+}
+progress {
+
+width: 70%;
+height: 20px;
+color: orange;
+background: #000;
+}
+
+hr {
+
+border: 0;
+height: 1px;
+background: #f36f48;
+
+}
+form {
+
+text-align: center;
+margin-top: 0;
+}
+ .sumbit{   
+    background-color: orange;
+    padding: 12px 45px;
+    cursor: pointer;
+    border-radius: 5px; 
+    color: #ffffff; 
+    outline: none;
+    border: none;
+    margin: 0; 
+    font-weight: bold;
+ }    
+.submit:hover {
+    
+background-color: black;
+}    
+    textarea {
+    
+    height: 100px;
+    
+}    
+input, textarea {    
+margin-bottom: 10px; 
+font-size: 11pt;
+padding: 15px 10px 10px; 
+border: 1px solid #cecece; 
+background-color: #efefef;
+color: #787575;
+border-radius: 5px; 
+width: 70%;
+outline: none;
+
+}
+
+.face {
+
+transform:scale(0.4);
+margin: 0 auto;
+display: block;
+margin-top: -35px;
+margin-bottom: -25px;
+}
+
+#contacts img {
+
+height: 50px; 
+width: 50px;
+margin-left: 7px;
+margin-right: 7px;
+}
+.head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contacts a {
+    text-decoration: none;
+}
+     #contacts img:hover{ 
+        opacity: 0.8;
+}
+      #contacts {
+    
+    text-align: center;
+}
+    .info{
+      border: 2px solid orange;
+      color: orange;
+      width: 150px;
+      margin: 5px;
+      font-size: 15px;
+      font-weight: bold;
+      background-color: white;
+    }
+    .Copyright {
+    
+font-size: 18px;
+text-align: center;
+ padding-bottom: 10px;
+color: black;
+}
+.list-section{
+  width: 60%;
+  margin: auto;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <a href="#" class="nav-link">About Me</a>
+        <a href="#Contact" class="nav-link">Contact</a>
+        <a href="#Skills" class="nav-link">My Skills</a>
+        
+      </nav>
+    </header>
+    <!--header image start-->
+  <div id="header" class="section">
+    <img alt="" class="img-circle"
+    src="https://images.unsplash.com/photo-1539667547529-84c607280d20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YmVhdXRpZnVsJTIwc2NlbmVyeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+    <p>Sholeh Mohd</p>
+  </div>
+  <div class="section">
+    <h1 id="#"><span>About Me</span></h1>
+    <p>
+  Hey! Its me <b>Sholeh</b> I am currently studying in grade 9.I am a student of <em>span int academy</em>
+ really really Love reading <b>Novels</b>
+ my favourite one yet is "they both die at the end"
+ I also love writing as i often dive in and write about my life in my journal <em>Aria</em>
+ My life nowadays is a complete mess as a often don't know when to do and what to do?
+ the only thing i can still expect is a better future.
+    </p>
+  </div>
+  <!--About Me Section-->
+  <div>
+  <div class="section main" >
+    <div class="head">
+      <button class="info">My Projects
+
+      </button>
+    </div>
+    <div class="gallery list-section">
+      <div class="gallery-item">
+<img src="sunriseSholeh.jpg" alt=" Sunrise">
+  </div>
+    <div class="gallery-item">
+      <img src="mountains.jpg" alt="Black and white Mountain">
+    </div>
+    <div class="gallery-item">
+      <img src="pyramid.jpg" alt="Lake with mountain">
+    </div>
+    <div class="gallery-item">
+      <img src="lake.jpg" alt="Lake and Clouds">
+    </div>
+    </div>
+    <!--My projects end-->
+   <!--My skills Start -->
+   <div class="section">
+    <div class="head">
+      <button class="info">My Skills
+
+      </button>
+    </div>
+    <div class="list-section">
+    <ul class="list
+    " >
+
+      <li>Public Speaking<br />
+        <progress min="0" max="100" value="80"></progress>
+     </li>
+     <li>Planning <br />
+      <progress min="0" max="100" value="90"></progress>
+     </li>
+     <li>Critical thinking <br />
+      <progress min="0" max="100" value="75"></progress>
+     </li>
+     <li>Teamwork Skills<br />
+      <progress min="0" max="100" value="50"></progress>
+     </li>
+    </ul>
+  </div>
+   </div>
+
+   <!--My Skills Section End-->
+   <!--Form Section Start-->
+   <div class="section">
+    <div class="head">
+      <button class="info">Contact Me
+
+      </button>
+    </div>
+    <form action="sholeh.mohd1@gmail.com" method="post" enctype="text/plain">
+      <input name="name" placeholder="Name" type="text" required /><br/>
+      <input name="email" placeholder="Email" type="email" required /><br/>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <input type="submit" value="SEND" class="sumbit" />
+    </form>
+   </div>
+   <!--form section ends-->
+   <!--Contact me section starts-->
+  <div class="section" id="contacts">
+    <h1><span>Follow Me</span></h1>
+    <div>
+      <a href="https:/instagram.com/shoyore_kun">
+        <img alt="Instagram" src="https://imgs.search.brave.com/AILOdhx7f-JkU-pW26zcbufShFoWmcBI2MgU-ZI-qz8/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5T/Wi1MNHhpdktKV0pH/NVhET1ZwendBSGFI/YSZwaWQ9QXBp"
+/>
+      </a>  
+    </div>
+  </div>
+   <!--Contact section ends-->
+   <div class="copyright">
+    &copy; 2022 A sincere web developer.All rights reserved.
+   </div>
+  </body> 
+</html> 
